@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pomodoro</title>
+  </head>
+  <body>
+    <h1>Pomodoro</h1>
+
+    <figure class="clock">
+      <div class="mins">0</div>
+      <div>:</div>
+      <div class="secs">00</div>
+
+      <audio
+        src="https:soundbible.com/mp3/service-bell_daniel_simion.mp3"
+      ></audio>
+
+      <svg class="progress-ring" height="120" width="120">
+        <circle
+          class="progress-ring__circle"
+          stroke-width="8"
+          fill="transparent"
+          r="50"
+          cx="60"
+          cy="60"
+        />
+      </svg>
+    </figure>
+
+    <div class="btn-group">
+      <button class="start">Start Focus</button>
+      <button class="reset">Reset</button>
+      <button class="pause">Pause</button>
+    </div>
+
+    <form action=".">
+      <label for="focusTime">Focus Time</label>
+      <input type="number" value="1" id="focusTime" />
+      <label for="focusTime">Break Time</label>
+      <input type="number" value="1" id="breakTime" />
+      <button type="submit">Save Settings</button>
+    </form>
+
+    <script src="settings.js"></script>
+    <script src="timer.js"></script>
+    <script src="progress.js"></script>
+  </body>
+</html>
